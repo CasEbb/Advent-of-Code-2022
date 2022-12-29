@@ -17,9 +17,7 @@ for line in data.split("\n"):
 
 ct = 0
 y = 2_000_000
-for x in range(
-    min(x - d for x, _, d in sensors), max(x + d for x, _, d in sensors)
-):
+for x in range(min(x - d for x, _, d in sensors), max(x + d for x, _, d in sensors)):
     if not possible(x, y) and (x, y) not in beacons:
         ct += 1
 print(ct)
